@@ -1,0 +1,29 @@
+.Home-Page {
+    min-height: auto ; /* Set minimum height to fill the viewport */
+}
+
+  .homeimg {
+    width: 90%; /* Adjust width relative to parent container */
+    max-width: 800px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5%; /* Adjust margin */
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5), 0 0 0 10px rgba(255, 255, 255, 0.3); /* Set blurred border */
+    outline: 1px solid transparent; /* Hide default outline */
+}
+
+
+.viewBook {
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    border-radius: 5px ;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .homeimg {
+        max-width: 100%; /* Adjust width for smaller screens */
+        margin-right: 0; /* Remove right margin */
+    }
+}

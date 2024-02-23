@@ -1,0 +1,16 @@
+.book-item {
+    width: calc(25% - 20px); /* Adjust as per your preference to display 4 books per row */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .book-item {
+      width: calc(50% - 20px); /* Display 2 books per row on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .book-item {
+      width: calc(100% - 20px); /* Display 1 book per row on extra small screens */
+    }
+  }
+  

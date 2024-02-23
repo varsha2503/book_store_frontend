@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #fffd95, #2e38ad);
+}
+
+#root {
+  flex: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.viewBook {
+  outline: none;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 5px 20px 5px 20px;
+  color: white;
+  font-Size: 20px;
+}
