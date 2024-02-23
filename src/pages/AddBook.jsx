@@ -13,19 +13,39 @@ const AddBook = () => {
     }
 
     // Function to submit the form data
-    const submit = async () => {
-        try {
-            // Send a POST request to add the new book
-            await axios.post("https://book-store-kf5m.onrender.com/api/v1/add", Data);
-            alert("Book added successfully!");
-            // Clear form data after successful submission
-            setData({ name: '', author: '', isbn: '', des: '', price: '', image: '' });
-        } catch (error) {
-            // Handle error if adding book fails
-            console.error("Error adding book:", error);
-            alert("Failed to add book. Please try again.");
-        }
-    }
+    const submit = async (e) => {
+        e.preventDefault();
+        if (
+            !Data.name.trim() ||
+            !Data.author.trim() ||
+            !Data.isbn.trim() ||
+            !Data.des.trim() ||
+            !Data.price.trim() ||
+            !Data.image.trim()
+          ) {
+            alert('Please fill out all fields');
+            return;
+          }
+      
+          try {
+            // Make POST request to add book
+            const response = await axios.post('https://book-store-kf5m.onrender.com/api/v1/add', Data);
+            console.log('Book added successfully:', response.data);
+            // Clear form after successful submission
+            setData({
+              name: '',
+              author: '',
+              isbn: '',
+              des: '',
+              price: '',
+              image: '',
+            });
+            alert('Book added successfully!');
+          } catch (error) {
+            console.error('Error adding book:', error);
+            alert('Failed to add book. Please try again.');
+          }
+        };
 
     console.log(Data);
 
