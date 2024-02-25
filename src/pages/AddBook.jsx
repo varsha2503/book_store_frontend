@@ -70,7 +70,7 @@ const AddBook = () => {
                 <div className="mb-3 ">
                     <label htmlFor="exampleFormControlInput1" className="form-label"><b>ISBN</b></label>
                     <input type="number" className="form-control" id="exampleFormControlInput1" 
-                        placeholder="Ex : 736459346713" name="isbn" onChange={change} value={Data.isbn} />
+                        placeholder="Enter a 12 Digit number" name="isbn" onChange={change} value={Data.isbn} />
                 </div>
                 <div className="mb-3 ">
                     <label htmlFor="exampleFormControlInput1" className="form-label"><b>Description</b></label>
